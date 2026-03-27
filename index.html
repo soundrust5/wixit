@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wixit | Advanced Network Access</title>
+    <style>
+        /* Основная цветовая гамма: Deep Dark + Violet Accent */
+        body { 
+            background-color: #0a0e17; 
+            color: #e2e8f0; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        /* Баннер бета-теста сверху */
+        .beta-banner {
+            background: #f59e0b; /* Золотисто-оранжевый */
+            color: #000;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: 800;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Шапка сайта */
+        header {
+            background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
+            width: 100%;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 3em; 
+            letter-spacing: 4px; 
+            color: white; 
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        header p { 
+            margin: 10px 0 0; 
+            font-size: 1.1em; 
+            color: #c4b5fd; 
+            font-weight: 300; 
+        }
+
+        /* Контейнер контента */
+        .container { 
+            width: 90%; 
+            max-width: 600px; 
+            padding: 30px 0 60px; 
+        }
+
+        /* Карточки */
+        .card { 
+            background-color: #111827; 
+            border-radius: 20px; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            border: 1px solid #1f2937; 
+            transition: all 0.3s ease;
+        }
+
+        .card:hover { 
+            border-color: #4c1d95;
+            box-shadow: 0 10px 30px rgba(109, 40, 217, 0.15);
+        }
+
+        .card h2 { 
+            margin-top: 0; 
+            color: #a78bfa; 
+            font-size: 1.5em; 
+            border-left: 4px solid #7c3aed; 
+            padding-left: 15px; 
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Тарифы */
+        .price-tag { 
+            font-size: 2.8em; 
+            font-weight: bold; 
+            color: white; 
+            margin: 20px 0; 
+        }
+        .price-tag span { 
+            font-size: 0.4em; 
+            color: #6b7280; 
+            text-transform: uppercase;
+        }
+
+        .premium-card { 
+            border: 2px solid #7c3aed; 
+            background: linear-gradient(180deg, #111827 0%, #161b2b 100%);
+        }
+
+        /* Замороженная кнопка */
+        .btn-locked { 
+            display: block; 
+            width: 100%; 
+            background: #1f2937; 
+            color: #4b5563; 
+            padding: 18px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-align: center; 
+            cursor: not-allowed;
+            border: 1px solid #374151;
+            font-size: 1.1em;
+        }
+
+        /* Список фишек */
+        .features { list-style: none; padding: 0; margin: 20px 0; }
+        .features li { 
+            margin-bottom: 12px; 
+            padding-left: 30px; 
+            position: relative; 
+            color: #d1d5db; 
+            line-height: 1.4;
+        }
+        .features li::before { 
+            content: '✦'; 
+            position: absolute; 
+            left: 0; 
+            color: #7c3aed; 
+        }
+
+        /* Футер */
+        footer { 
+            width: 100%; 
+            text-align: center; 
+            padding: 40px 0; 
+            border-top: 1px solid #1f2937;
+            font-size: 0.9em;
+            color: #4b5563;
+        }
+
+        .cf-accent { color: #f97316; font-weight: bold; } /* Cloudflare Orange */
+
+    </style>
+</head>
+<body>
+
+    <div class="beta-banner">Внимание: Система находится в режиме Beta-тестирования</div>
+
+    <header>
+        <h1>Wixit</h1>
+        <p>Private Fast Network Solutions</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- СТАТУС -->
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Network Status</h3>
+                <span class="status-badge">Operational</span>
+            </div>
+            <p style="color: #9ca3af; font-size: 0.9em;">Все узлы Wixit Cloud активны. Пинг в норме.</p>
+        </div>
+
+        <!-- ПОЧЕМУ МЫ -->
+        <div class="card">
+            <h2>Почему Wixit?</h2>
+            <ul class="features">
+                <li><strong>Абсолютный обход:</strong> Discord, YouTube в 4K и TikTok работают без задержек и фильтров.</li>
+                <li><strong>Ультра-скорость:</strong> Wixit не режет канал. Скорость выше, чем у большинства платных VPN.</li>
+                <li><strong>Игровой пинг:</strong> Оптимизированные маршруты для минимального отклика в PUBG, Brawl Stars и MLBB.</li>
+                <li><strong>Stealth-технология:</strong> Твой трафик замаскирован под обычный веб-серфинг.</li>
+            </ul>
+        </div>
+
+        <!-- ТАРИФ PREMIUM -->
+        <div class="card premium-card">
+            <h2>Wixit Premium</h2>
+            <p style="color: #9ca3af;">Максимальный приоритет и полный безлимит.</p>
+            <div class="price-tag">50 ₽ <span>/ 7 дней</span></div>
+            
+            <ul class="features">
+                <li>Выделенный зашифрованный туннель</li>
+                <li>Отсутствие лимитов по трафику</li>
+                <li>Приоритет в очереди на сервере</li>
+                <li>Support 24/7</li>
+            </ul>
+
+            <div class="btn-locked">🔒 Доступ ограничен (Beta)</div>
+            <p style="font-size: 0.8em; text-align: center; margin-top: 15px; color: #f59e0b;">
+                Прием новых заявок временно приостановлен
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024-2026 Wixit Global Network</p>
+        <p>Infrastructure: <span class="cf-accent">Cloudflare Edge</span> | Stealth Mode: Active</p>
+    </footer>
+
+</body>
+</html>
